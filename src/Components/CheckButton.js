@@ -14,7 +14,7 @@ const CheckButton = React.memo(
     const navigation = useNavigation();
 
     const checkAction = () => {
-      return fetch('https://pushmore.io/', {
+      return fetch('https://pushmore.io/webhook/d3Gm4aEPCuhAUjfbECLLdW41', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
