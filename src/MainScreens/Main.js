@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useCallback, useEffect, useState, useContext } from 'react';
-import { View, StyleSheet, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { useEffect, useContext } from 'react';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import AppContext from '../AppContext'
 import CheckButton from '../Components/CheckButton';
@@ -10,14 +10,14 @@ const Main = React.memo(
 
     const navigation = useNavigation();
 
-    const { username, reponame } = useContext(AppContext);
+    const { username, reponame, color } = useContext(AppContext);
 
     useEffect(() => {
     }, [username, reponame]);
 
     return (
       <>
-        <View style={styles.container}>
+        <View style={[styles.container, {backgroundColor: color}]}>
           <Text style={styles.title}>Set the repository address</Text>
           <Text style={styles.text}>github.com</Text>
           <TouchableOpacity style={{flexDirection: 'row'}} onPress={() => navigation.navigate("User")}>
@@ -40,7 +40,6 @@ Main.displayName = 'Main';
 const styles = StyleSheet.create({
   container: {
     padding: 40,
-    backgroundColor: 'white',
     flex: 1
   },
   text: {

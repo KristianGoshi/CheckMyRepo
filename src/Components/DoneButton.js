@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useCallback, useEffect, useState, useContext } from 'react';
-import { View, StyleSheet, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { useEffect, useContext } from 'react';
+import { StyleSheet, Text,  TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import AppContext from '../AppContext';
 

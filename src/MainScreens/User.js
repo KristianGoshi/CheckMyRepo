@@ -1,12 +1,19 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
 import DoneButton from '../Components/DoneButton';
+import AppContext from '../AppContext';
 
 const User = React.memo(
   () => {
 
     const [text, onChangeText] = useState(null);
+
+    const { dispatchNameEvent } = useContext(AppContext);
+
+    useEffect(() => {
+      dispatchNameEvent('SET_COLOR', { color: 'white' });
+    }, []);
 
     return (
       <>
@@ -19,7 +26,7 @@ const User = React.memo(
             autoCapitalize='none'
           />
         </View>
-        <DoneButton action={'ADD_USERNAME'} payload={text} name={'username'} />
+        <DoneButton action={'SET_USERNAME'} payload={text} name={'username'} />
       </>
     );
   },

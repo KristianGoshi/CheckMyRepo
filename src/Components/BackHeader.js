@@ -1,16 +1,11 @@
 import * as React from 'react';
-import { useCallback, useEffect, useState } from 'react';
-import { View, StyleSheet, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const BackHeader = React.memo(
   (props) => {
 
     const navigation = useNavigation();
-
-    useEffect(() => {
-
-    }, []);
 
     return (
       <View style={styles.container}>

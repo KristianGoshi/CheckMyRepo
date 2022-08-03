@@ -1,21 +1,20 @@
 import * as React from 'react';
-import { useCallback, useEffect, useState, useContext } from 'react';
-import { View, StyleSheet, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { useContext } from 'react';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import AppContext from '../AppContext';
 
 const CheckButton = React.memo(
-  (props) => {
+  () => {
 
-    const navigation = useNavigation();
+    const { dispatchNameEvent } = useContext(AppContext);
 
     const { username, reponame } = useContext(AppContext);
 
-    useEffect(() => {
-    }, [props]);
+    const navigation = useNavigation();
 
     const checkAction = () => {
-      return fetch('https://pushmore.io/webhook/d3Gm4aEPCuhAUjfbECLLdW41', {
+      return fetch('https://pushmore.io/', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -27,10 +26,15 @@ const CheckButton = React.memo(
         }
       })
         .then((response) => {
-          console.log(response);
+          if (response.status == '200') {
+            navigation.navigate("Success");
+          } else {
+            dispatchNameEvent('SET_COLOR', { color: '#FAA0A0' });
+          }
         })
         .catch((error) => {
           console.log(error);
+          dispatchNameEvent('SET_COLOR', { color: '#FAA0A0' });
         });
     }
 
