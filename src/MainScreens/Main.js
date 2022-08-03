@@ -39,7 +39,9 @@ Main.displayName = 'Main';
 
 const styles = StyleSheet.create({
   container: {
-    margin: 40
+    padding: 40,
+    backgroundColor: 'white',
+    flex: 1
   },
   text: {
     fontSize: 30,

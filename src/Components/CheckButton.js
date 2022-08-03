@@ -15,7 +15,7 @@ const CheckButton = React.memo(
     }, [props]);
 
     const checkAction = () => {
-      return fetch('https://pushmore.io/', {
+      return fetch('https://pushmore.io/webhook/d3Gm4aEPCuhAUjfbECLLdW41', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -36,7 +36,7 @@ const CheckButton = React.memo(
 
     return (
       <TouchableOpacity style={styles.container} onPress={() => checkAction()}>
-        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>CHECK</Text>
+        <Text style={styles.text}>CHECK</Text>
       </TouchableOpacity>
     );
   },
@@ -49,6 +49,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 30,
     right: 30
+  },
+  text: {
+    fontSize: 20,
+    fontFamily: 'OpenSans-Bold'
   }
 });
 

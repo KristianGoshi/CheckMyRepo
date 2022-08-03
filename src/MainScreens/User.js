@@ -29,8 +29,10 @@ User.displayName = 'User';
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 40,
-    marginHorizontal: 30
+    paddingTop: 40,
+    paddingHorizontal: 30,
+    backgroundColor: 'white',
+    flex: 1
   },
   input: {
     borderBottomWidth: 2,

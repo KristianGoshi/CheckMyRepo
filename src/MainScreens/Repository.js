@@ -29,8 +29,10 @@ Repository.displayName = 'Repository';
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 40,
-    marginHorizontal: 30
+    paddingTop: 40,
+    paddingHorizontal: 30,
+    flex: 1,
+    backgroundColor: 'white'
   },
   input: {
     borderBottomWidth: 2,

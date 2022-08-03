@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     alignItems: 'center',
     backgroundColor: 'white',
-    marginTop: 10
+    marginTop: 10,
   },
   headerTitle: {
     marginLeft: 30,
