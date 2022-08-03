@@ -18,7 +18,7 @@ const Main = React.memo(
     return (
       <>
         <View style={styles.container}>
-          <Text style={{fontSize: 20, fontWeight: 'bold', marginBottom: 20}}>Set the repository address</Text>
+          <Text style={styles.title}>Set the repository address</Text>
           <Text style={styles.text}>github.com</Text>
           <TouchableOpacity style={{flexDirection: 'row'}} onPress={() => navigation.navigate("User")}>
             <Text style={styles.text}>/</Text>
@@ -43,7 +43,13 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 30,
+    fontFamily: 'OpenSans-Medium',
     marginBottom: 5
+  },
+  title: {
+    fontSize: 20,
+    marginBottom: 20,
+    fontFamily: 'OpenSans-Bold'
   }
 });
 

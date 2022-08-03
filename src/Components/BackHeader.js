@@ -23,7 +23,7 @@ const BackHeader = React.memo(
             }}
           />
         </TouchableOpacity>
-        <Text style={{marginLeft: 30, fontSize: 20, fontWeight: 'bold'}}>{props.title}</Text>
+        <Text style={styles.headerTitle}>{props.title}</Text>
       </View>
     );
   },
@@ -38,6 +38,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
     marginTop: 10
+  },
+  headerTitle: {
+    marginLeft: 30,
+    fontSize: 20,
+    fontFamily: 'OpenSans-Bold'
   }
 });
 

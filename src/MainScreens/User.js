@@ -35,6 +35,8 @@ const styles = StyleSheet.create({
   input: {
     borderBottomWidth: 2,
     paddingBottom: 10,
+    fontSize: 17,
+    fontFamily: 'OpenSans-Medium'
   },
 });
 

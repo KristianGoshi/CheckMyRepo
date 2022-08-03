@@ -22,7 +22,7 @@ const DoneButton = React.memo(
 
     return (
       <TouchableOpacity style={styles.container} onPress={() => doneAction()}>
-        <Text style={{fontSize: 20, fontWeight: 'bold'}}>DONE</Text>
+        <Text style={styles.text}>DONE</Text>
       </TouchableOpacity>
     );
   },
@@ -35,6 +35,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 30,
     right: 30
+  },
+  text: {
+    fontSize: 20,
+    fontFamily: 'OpenSans-Bold'
   }
 });
 
