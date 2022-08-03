@@ -13,6 +13,7 @@ const Repository = React.memo(
 
     useEffect(() => {
       dispatchNameEvent('SET_COLOR', { color: 'white' });
+      dispatchNameEvent('SET_REPONAME', { reponame: undefined });
     }, []);
 
     return (

@@ -13,6 +13,7 @@ const User = React.memo(
 
     useEffect(() => {
       dispatchNameEvent('SET_COLOR', { color: 'white' });
+      dispatchNameEvent('SET_USERNAME', { username: undefined });
     }, []);
 
     return (
